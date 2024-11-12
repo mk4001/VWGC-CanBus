@@ -1,0 +1,740 @@
+[
+    {
+        "id": "5aa2b77b8eaf1708",
+        "type": "tab",
+        "label": "CAN BUS",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "caa649aff4d0bca7",
+        "type": "socketcan-out",
+        "z": "5aa2b77b8eaf1708",
+        "name": "socketcan-out",
+        "config": "672b93542908154e",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "1bf04aeaf740be7e",
+                "50bbac07fb75b19a"
+            ]
+        ]
+    },
+    {
+        "id": "e5ae49822f7cc839",
+        "type": "socketcan-in",
+        "z": "5aa2b77b8eaf1708",
+        "name": "socketcan-in",
+        "config": "672b93542908154e",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3d0e37c529f2d5d5",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Send object - std",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ext\":false,\"canid\":123,\"dlc\":5,\"data\":[1,2,3,4,5]}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "e018b3f4f727be7d",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Step IN",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "18EF71C9#4000000000000000",
+        "payloadType": "str",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "dafe53da35b8994a",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Step OUT",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "18EF71C9#1000000000000000",
+        "payloadType": "str",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "1462b4dfacaa72af",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Send object - ext",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"ext\":true,\"canid\":32278,\"dlc\":5,\"data\":[1,2,3,4,5]}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "b51b95a0ab9154d6",
+        "type": "comment",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Send CAN frames in using different payloads on CAN0",
+        "info": "",
+        "x": 220,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "88e42b7f73903d53",
+        "type": "comment",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Receiove CAN data from interface CAN0",
+        "info": "",
+        "x": 220,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1bf04aeaf740be7e",
+        "type": "switch",
+        "z": "5aa2b77b8eaf1708",
+        "name": "CAN IDs",
+        "property": "payload.canid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "418345963",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "418345707",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "418345195",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "4293441fd5e15d7e",
+                "df88cc17049b69bf"
+            ],
+            [
+                "63ac08be4121b12a",
+                "ebac6027f9198f9a",
+                "cd208298d8d4b245"
+            ],
+            [
+                "0e2746411fe0cff4",
+                "6d65c1ddd8f5225d"
+            ]
+        ]
+    },
+    {
+        "id": "6d0ee59657e0858e",
+        "type": "ui_gauge",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Grey Water %",
+        "group": "0c5accd23e286133",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "donut",
+        "title": "Grey Water %",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff2600",
+            "#e6e600",
+            "#00f900"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4293441fd5e15d7e",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [6]",
+        "func": "msg.payload = msg.payload.data[6]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "6d0ee59657e0858e"
+            ]
+        ]
+    },
+    {
+        "id": "df88cc17049b69bf",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [4]",
+        "func": "msg.payload = msg.payload.data[4]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "834b7f073070a53e"
+            ]
+        ]
+    },
+    {
+        "id": "834b7f073070a53e",
+        "type": "ui_gauge",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Clear Water %",
+        "group": "0c5accd23e286133",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "donut",
+        "title": "Clear Water %",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff2600",
+            "#e6e600",
+            "#00f900"
+        ],
+        "seg1": "20",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 920,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "63ac08be4121b12a",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [4]",
+        "func": "msg.payload = Number (msg.payload.data[4] /10) + 5\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 560,
+        "wires": [
+            [
+                "9af0ecb1cc560db0"
+            ]
+        ]
+    },
+    {
+        "id": "ebac6027f9198f9a",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [3]",
+        "func": "msg.payload = msg.payload.data[3]*10\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "49011cbef69264e3"
+            ]
+        ]
+    },
+    {
+        "id": "49011cbef69264e3",
+        "type": "ui_text",
+        "z": "5aa2b77b8eaf1708",
+        "group": "6cc5af31c5793d2f",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "Percentage",
+        "label": "Percentage",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 910,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9af0ecb1cc560db0",
+        "type": "ui_text",
+        "z": "5aa2b77b8eaf1708",
+        "group": "6cc5af31c5793d2f",
+        "order": 2,
+        "width": 2,
+        "height": 1,
+        "name": "Volts",
+        "label": "Volts",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cd208298d8d4b245",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [6]",
+        "func": "if (msg.payload.data[0] === 80) {\n    msg.payload = msg.payload.data[6];\n    return msg;\n} else {\n    msg.payload = msg.payload.data[6] - 255;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 600,
+        "wires": [
+            [
+                "07bb6dddc3647f63"
+            ]
+        ]
+    },
+    {
+        "id": "07bb6dddc3647f63",
+        "type": "ui_text",
+        "z": "5aa2b77b8eaf1708",
+        "group": "6cc5af31c5793d2f",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "name": "Amps",
+        "label": "Amps",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "0e2746411fe0cff4",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [2]",
+        "func": "msg.payload = msg.payload.data[2] \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 720,
+        "wires": [
+            [
+                "1882a260afa1736c"
+            ]
+        ]
+    },
+    {
+        "id": "1882a260afa1736c",
+        "type": "ui_text",
+        "z": "5aa2b77b8eaf1708",
+        "group": "6cc5af31c5793d2f",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "name": "Hours",
+        "label": "Hours",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6d65c1ddd8f5225d",
+        "type": "function",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Byte [3]",
+        "func": "msg.payload = msg.payload.data[3] \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 760,
+        "wires": [
+            [
+                "e6d2b0bcdb7ee0a4"
+            ]
+        ]
+    },
+    {
+        "id": "e6d2b0bcdb7ee0a4",
+        "type": "ui_text",
+        "z": "5aa2b77b8eaf1708",
+        "group": "6cc5af31c5793d2f",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "name": "mins",
+        "label": "mins",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bd561a13d9d1a0ec",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Camping Mode ON/OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "18EF71C9#00.40.00.00.00.00.00.00",
+        "payloadType": "str",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "50bbac07fb75b19a",
+        "type": "debug",
+        "z": "5aa2b77b8eaf1708",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e203a12ead73eaf7",
+        "type": "ui_button",
+        "z": "5aa2b77b8eaf1708",
+        "name": "",
+        "group": "b06789951fe14aaf",
+        "order": 0,
+        "width": "2",
+        "height": "2",
+        "passthru": true,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "mi-coffee",
+        "payload": "18EF70EB#0004000000000000",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "e5ae49822f7cc839"
+            ]
+        ]
+    },
+    {
+        "id": "71af592bf23ba511",
+        "type": "inject",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Wakeup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "e203a12ead73eaf7"
+            ]
+        ]
+    },
+    {
+        "id": "1a3e2803e8aefdae",
+        "type": "comment",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Tank",
+        "info": "",
+        "x": 630,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "58220087159aa45d",
+        "type": "comment",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Battery",
+        "info": "",
+        "x": 630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9ec5016b5c9cecfd",
+        "type": "comment",
+        "z": "5aa2b77b8eaf1708",
+        "name": "Autonomy",
+        "info": "",
+        "x": 640,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "81f7b177436d3d09",
+        "type": "mqtt out",
+        "z": "5aa2b77b8eaf1708",
+        "name": "",
+        "topic": "msg.payload",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "20437dd933dc6820",
+        "x": 350,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "672b93542908154e",
+        "type": "socketcan-config",
+        "interface": "can0"
+    },
+    {
+        "id": "0c5accd23e286133",
+        "type": "ui_group",
+        "name": "Water",
+        "tab": "9f98844b53cddff3",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6cc5af31c5793d2f",
+        "type": "ui_group",
+        "name": "Battery",
+        "tab": "9f98844b53cddff3",
+        "order": 3,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b06789951fe14aaf",
+        "type": "ui_group",
+        "name": "WakeUp",
+        "tab": "9f98844b53cddff3",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "20437dd933dc6820",
+        "type": "mqtt-broker",
+        "name": "RPI-MQTT Broker",
+        "broker": "rpi",
+        "port": "1883",
+        "clientid": "VWGC",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9f98844b53cddff3",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
