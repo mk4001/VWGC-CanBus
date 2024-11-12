@@ -59,3 +59,4 @@ To import the Flow Node-RED that generates the dashboard that can then be used v
 
 https://github.com/mk4001/VWGC-CanBus/blob/main/flows.json
 
+Anyone who can bravely implement other commands for other functions, which I have not been able to intercept or replicate in this exercise, please share them with me and all other VW Gradn California users; we will be very happy.
