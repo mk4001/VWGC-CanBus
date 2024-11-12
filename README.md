@@ -52,8 +52,10 @@ To send a command to a specific device, you must use the command:
 **cansend can0 18EF70C9#00.40.00.00.00.00.00.00** (Example)
 
 The list of commands for reading and/or writing is shown in the attached PDF table
+
 https://github.com/mk4001/VWGC-CanBus/blob/main/VW%20GC%20CAN-BUS.pdf
 
 To import the Flow Node-RED that generates the dashboard that can then be used via a browser, you need to import the attached Json Flow.
+
 https://github.com/mk4001/VWGC-CanBus/blob/main/flows.json
 
