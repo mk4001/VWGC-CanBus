@@ -42,3 +42,13 @@ After having mounted the CAN HAT plug-in card on your Raspberry, you need to pro
 modifying as follows:
 
 <img width="421" alt="Screenshot 2024-11-12 at 10 49 07" src="https://github.com/user-attachments/assets/813c13d5-f577-4c91-ae50-05b2e33ad62f">
+
+to be able to "sniff" the data coming from the CAN-BUS it is sufficient to use the command:
+
+**cansniffer can0 -c -t0**
+
+To send a command to a specific device, you must use the command:
+
+**cansend can0 18EF70C9#00.40.00.00.00.00.00.00** (Example)
+
+The list of commands for reading and/or writing is shown in the attached PDF table
