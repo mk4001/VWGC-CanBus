@@ -90,4 +90,4 @@ The RGB controller is obviously located inside the technical cabinet exactly und
 
 ------------------------------------------------------------------------------------
 
-Anyone who can bravely implement other commands for other functions, which I have not been able to intercept or replicate in this exercise, please share them with me and all other VW Gradn California users; we will be very happy.
+Anyone who can bravely implement other commands for other functions, which I have not been able to intercept or replicate in this exercise, please share them with me and all other VW Grand California users; I'll be very happy.
