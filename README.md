@@ -72,4 +72,22 @@ https://github.com/mk4001/VWGC-CanBus/blob/main/flows.json
 
 ------------------------------------------------------------------------------------
 
+**Leisure CAN-Bus Connections:**
+
+As you can see from the original wiring diagram of the manufacturer below, there are several points where you can connect to the "Convenience CAN-Bus" or Leisure CAN-Bus.
+
+<img width="829" alt="MRS RGB Led2" src="https://github.com/user-attachments/assets/779b040c-39f3-4766-86ee-b8d85bd788e7">
+
+
+I found it more convenient to connect to the R/G/B controller of the LED strip called: "7C4 947 022" more precisely to pins 9 and 10, as reported by the manufacturer's nomenclature.
+
+<img width="953" alt="Screenshot 2024-11-13 at 09 49 07" src="https://github.com/user-attachments/assets/4735321d-cc62-4921-81b8-273e5689e8df">
+
+The RGB controller is obviously located inside the technical cabinet exactly under the 230V electrical panel
+
+![VW controller CAN-BUS](https://github.com/user-attachments/assets/c56e8efb-ccc1-46e1-bcbd-4c871873f29d)
+
+
+------------------------------------------------------------------------------------
+
 Anyone who can bravely implement other commands for other functions, which I have not been able to intercept or replicate in this exercise, please share them with me and all other VW Gradn California users; we will be very happy.
