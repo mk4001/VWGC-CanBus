@@ -26,7 +26,7 @@
 | Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4B is the percentage /10 (ES: 0A -> 10*10 = 100)|
 | Display goes ON|18EF70C9|00 40 00 00 00 00 00 00|using I/O Button|
 | Display goes OFF|18EF70C9|00 00 00 00 00 00 00 00|using I/O Button|
-| Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1B = 04 and then: 00|
+| Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1ºB = 04 and then: 00|
 | Set Color|18EF60C9|1E.00.64.2F.00.00.00.00|Set to color Y|
 | Set Color|18EF60C9|08.00.64.25.00.00.00.00|Set to color R|
 | Set Color|18EF60C9|7D.00.64.23.00.00.00.00|Set to color G|
