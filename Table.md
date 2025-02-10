@@ -25,7 +25,7 @@ Messages: Table 2
 | Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4B is the percentage /10 (ES: 0A -> 10*10 = 100)|
 | Display goes ON|18EF70C9|00 40 00 00 00 00 00 00|using I/O Button|
 | Display goes OFF|18EF70C9|00 00 00 00 00 00 00 00|using I/O Button|
-| Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1B = 04 e poi 00|
+| Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1B = 04 and then: 00|
 | Set Color|18EF60C9|1E.00.64.2F.00.00.00.00|Set to color Y|
 | Set Color|18EF60C9|08.00.64.25.00.00.00.00|Set to color R|
 | Set Color|18EF60C9|7D.00.64.23.00.00.00.00|Set to color G|
@@ -37,11 +37,11 @@ Commands: Table 3
 | Content | 1º seq | 2º seq | result |
 | --- | --- | --- | --- |
 | Camping Mode ON/OFF | cansend can0 18EF71C9#00.40.00.00.00.00.00.00|||
-| WiFi ON/OFF | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00 | on |
-| SAT ON/OFF | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | | ok |
+| WiFi ON/OFF | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00 | ON |
+| SAT ON/OFF | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | | OK |
 | Step Auto ON/OFF | cansend can0 18EF71C9#04.00.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00| |
 | Step OUT | cansend can0 18EF71C9#10.00.00.00.00.00.00.00 |||
 | Step IN | cansend can0 18EF71C9#40.00.00.00.00.00.00.00 |||
-| Ambient Lights ON/OFF | cansend can0 18EF70C9#04.40.00.00.00.00.00.00 | | ok |
-| External Lights ON/OFF | cansend can0 18EF70C9#00.41.00.00.00.00.00.00 | cansend can0 18EF70C9#00.40.00.00.00.00.00.00 | ok |
-| Internal Lights ON/OFF | cansend can0 18EF70C9#01.40.00.00.00.00.00.00 | | soso |
+| Ambient Lights ON/OFF | cansend can0 18EF70C9#04.40.00.00.00.00.00.00 | | OK |
+| External Lights ON/OFF | cansend can0 18EF70C9#00.41.00.00.00.00.00.00 | cansend can0 18EF70C9#00.40.00.00.00.00.00.00 | OK |
+| Internal Lights ON/OFF | cansend can0 18EF70C9#01.40.00.00.00.00.00.00 | | so&so |
