@@ -22,8 +22,8 @@
 | Battery Current (A)|18EF72EB|50 00 00 8A 59 00 07 02|The 6º Byte is the Ampere [+], the 0ºB > 0 = charging|Charging
 | Battery Current (A)|18EF72EB|00 00 00 0A 4C 00 FF 01|The 6º Byte are the Amperes [-] where FF=-1, FE=-2, FD=-3... MOD 2|Discharging
 | rem time battery|18EF70EB|01 00 3A 26 00 00 00 00|The 2ºB is h, the 3ºB min|
-| Battery Voltage (V)|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 5B translated into DEC: the ten +5 and you get the whole part, the unit is the decimal part.|
-| Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4B is the percentage /10 (ES: 0A -> 10*10 = 100)|
+| Battery Voltage (V)|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 5ºB translated into DEC: the ten +5 and you get the whole part, the unit is the decimal part.|
+| Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4ºB is the percentage /10 (ES: 0A -> 10*10 = 100)|
 | Display goes ON|18EF70C9|00 40 00 00 00 00 00 00|using I/O Button|
 | Display goes OFF|18EF70C9|00 00 00 00 00 00 00 00|using I/O Button|
 | Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1ºB = 04 and then: 00|
