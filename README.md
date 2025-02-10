@@ -68,7 +68,8 @@ To send a command to a specific device, you must use the command:
 **cansend can0 18EF70C9#00.40.00.00.00.00.00.00** (Example)
 
 The complete list of messages & commands:
-Table.md
+
+https://github.com/mk4001/VWGC-CanBus/blob/main/Table.md
 
 ------------------------------------------------------------------------------------
 
