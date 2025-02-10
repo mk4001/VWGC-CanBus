@@ -6,7 +6,10 @@ For all VW Grand California 600 and 680 owners, this project will help you under
 ------------------------------------------------------------------------------------
 
 **Disclaimer:**
-This project is for educational and research purposes only. All intellectual property, trademarks, and copyrights related to the CAN-BUS codes and protocols belong to Volkswagen Group (Volkswagen AG). No part of this project is intended to infringe on Volkswagen’s rights or facilitate unauthorized access, modification, or misuse of their proprietary systems. The information provided here is shared solely for learning and understanding vehicle communication protocols. Any use of this data is at the user's own risk and responsibility.
+This project is for educational and research purposes only. 
+All intellectual property, trademarks, and copyrights related to the CAN-BUS codes and protocols belong to Volkswagen Group (Volkswagen AG). 
+No part of this project is intended to infringe on Volkswagen’s rights or facilitate unauthorized access, modification, or misuse of their proprietary systems. 
+The information provided here is shared solely for learning and understanding vehicle communication protocols. Any use of this data is at the user's own risk and responsibility.
 
 ------------------------------------------------------------------------------------
 
@@ -20,6 +23,7 @@ I also created a portable version (smartphone or tablet) of the Dometic control 
 
 **Hardware:** 
 I used a Raspberry PI 3B plus but the same thing can easily be done with a Raspberry PI Zero 2 W, smaller, more comfortable and more economical in power consumption.
+
 The CAN-BUS plug-in board used for this project is a: "Waveshare RS485 CAN HAT for Raspberry Pi Zero/Zero W/Zero WH/2B/3B/3B, integrated CAN controller: MCP2515, 485 transceiver: SP3485", purchased on AliExpress.
 
 ![71zU665C5QL](https://github.com/user-attachments/assets/69e259d7-0d23-4f9c-8c85-0adf21cbc9ba)
