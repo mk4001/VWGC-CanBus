@@ -67,6 +67,9 @@ To send a command to a specific device, you must use the command:
 
 **cansend can0 18EF70C9#00.40.00.00.00.00.00.00** (Example)
 
+The complete list of messages & commands:
+Table.md
+
 ------------------------------------------------------------------------------------
 
 To import the Flow Node-RED that generates the dashboard that can then be used via a browser, you need to import the attached Json Flow.
