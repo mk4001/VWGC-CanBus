@@ -33,3 +33,15 @@ Messages: Table 2
 
 ------
 
+Commands: Table 3
+| Content | 1º seq | 2º seq | result |
+| --- | --- | --- | --- |
+| Camping Mode ON/OFF | cansend can0 18EF71C9#00.40.00.00.00.00.00.00|||
+| WiFi ON/OFF | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00 | on |
+| SAT ON/OFF | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | | ok |
+| Step Auto ON/OFF | cansend can0 18EF71C9#04.00.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00| |
+| Step OUT | cansend can0 18EF71C9#10.00.00.00.00.00.00.00 |||
+| Step IN | cansend can0 18EF71C9#40.00.00.00.00.00.00.00 |||
+| Ambient Lights ON/OFF | cansend can0 18EF70C9#04.40.00.00.00.00.00.00 | | ok |
+| External Lights ON/OFF | cansend can0 18EF70C9#00.41.00.00.00.00.00.00 | cansend can0 18EF70C9#00.40.00.00.00.00.00.00 | ok |
+| Internal Lights ON/OFF | cansend can0 18EF70C9#01.40.00.00.00.00.00.00 | | soso |
