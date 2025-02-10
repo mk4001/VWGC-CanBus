@@ -97,7 +97,7 @@ The RGB controller is obviously located inside the technical cabinet exactly und
 
 ------------------------------------------------------------------------------------
 
-Anyone who can bravely implement other commands for other functions, which I have not been able to intercept or replicate in this exercise, please share them with me and all other VW Grand California users; I'll be very happy.
+If you want to contribute to my research efforts on this and other reverse engineering projects of the VW Grand California, one of yours will be of great help.
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow)](https://www.buymeacoffee.com/mk4001)
 
