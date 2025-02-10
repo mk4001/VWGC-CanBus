@@ -1,4 +1,4 @@
-Master: Table 1
+# Master: Table 1
 
 | IDs | Description | Result1 | Result2 |
 | --- | --- | --- | --- |
@@ -9,12 +9,13 @@ Master: Table 1
 | 18EF73EB |
 | 18EF71C9 | Camping Mode ON/OFF | WiFi ON/OFF | SoundSystem ON/OFF/BT |
 | 18EF71EB | Camping Mode ON/OFF | WiFi ON/OFF | SoundSystem ON/OFF/BT |
-| 18EF72EB | 230V ON/OFF |
-| 18EF73EB | 230V ON/OFF | Grey Water Level at 7ºByte with 1º Byte=01 |
+| 18EF72EB | Input 230V ON/OFF |
+| 18EF73EB | Input 230V ON/OFF | Grey Water Level at 7ºByte with 1º Byte=01 |
 
 ------
 
-Messages: Table 2
+# Messages: Table 2
+
 | Content | IDs | Message | means | note |
 | --- | --- | --- | --- | --- |
 | Waters level %|18EF73EB|00 00 00 00 0B 00 04 00|ClearW = 11% 4ºB - GreyW = 4% 6ºB - ClearW is EMPTY if 0ºB = 01|
@@ -33,7 +34,8 @@ Messages: Table 2
 
 ------
 
-Commands: Table 3
+# Commands: Table 3
+
 | Content | 1º seq | 2º seq | result |
 | --- | --- | --- | --- |
 | Camping Mode ON/OFF | cansend can0 18EF71C9#00.40.00.00.00.00.00.00|||
