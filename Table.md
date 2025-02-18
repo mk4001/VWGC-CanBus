@@ -36,10 +36,10 @@
 
 # Commands: Table 3
 
-| Content | 1º seq | 2º seq | result |
-| --- | --- | --- | --- |
-| Camping Mode ON/OFF | cansend can0 18EF71C9#00.40.00.00.00.00.00.00|||
-| WiFi ON/OFF | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00 | ON |
+| Content | 1º seq | result |
+| --- | --- | --- |
+| Camping Mode | cansend can0 18EF71C9#00.40.00.00.00.00.00.00| ON/OFF |
+| WiFi ON/OFF | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | ON/OFF |
 | SAT ON/OFF | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | | OK |
 | Step Auto ON/OFF | cansend can0 18EF71C9#04.00.00.00.00.00.00.00 | cansend can0 18EF71C9#00.00.00.00.00.00.00.00| |
 | Step OUT | cansend can0 18EF71C9#10.00.00.00.00.00.00.00 |||
