@@ -40,10 +40,10 @@
 | --- | --- | --- |
 | Camping Mode | cansend can0 18EF71C9#00.40.00.00.00.00.00.00| ON/OFF |
 | WiFi | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | ON/OFF |
-| SAT | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | ON/OFF |
 | Step Auto | cansend can0 18EF71C9#04.00.00.00.00.00.00.00 | ON/OFF |
 | Step OUT | cansend can0 18EF71C9#10.00.00.00.00.00.00.00 ||
 | Step IN | cansend can0 18EF71C9#40.00.00.00.00.00.00.00 ||
 | Ambient Lights | cansend can0 18EF70C9#04.40.00.00.00.00.00.00 | ON/OFF |
 | External Lights | cansend can0 18EF70C9#00.41.00.00.00.00.00.00 | ON/OFF |
 | Internal Lights | cansend can0 18EF70C9#01.40.00.00.00.00.00.00 | ON/OFF |
+| SAT | cansend can0 18EF70C9#00.50.00.00.00.00.00.00 | ON/OFF |
