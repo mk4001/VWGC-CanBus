@@ -25,6 +25,7 @@
 | Battery Voltage (V)|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 5ºB translated into DEC: the ten +5 and you get the whole part, the unit is the decimal part.|
 | Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4ºB is the percentage /10 (ES: 0A -> 10*10 = 100)|
 | 240v Connected|18EF72EB|80 00 00 00 00 00 00 00| Electric cable connected
+| Step position|18EF71C9|XX 00 00 00 00 00 00 00| 81 or 65 in / 84 or 68 out
 | Display goes ON|18EF70C9|00 40 00 00 00 00 00 00|using I/O Button|
 | Display goes OFF|18EF70C9|00 00 00 00 00 00 00 00|using I/O Button|
 | Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1ºB = 04 and then: 00|
