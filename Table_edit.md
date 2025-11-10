@@ -40,7 +40,7 @@
 
 | Content | 1º seq | result |
 | --- | --- | --- |
-| Camping Mode | cansend can0 18EF71C9#00.40.00.00.00.00.00.00| ON/OFF |
+| Camping Mode | cansend can0 18EF71C9#00.64.00.00.00.00.00.00| ON/OFF |
 | WiFi | cansend can0 18EF71C9#00.01.00.00.00.00.00.00 | ON/OFF |
 | Step Auto | cansend can0 18EF71C9#04.00.00.00.00.00.00.00 | ON/OFF |
 | Step OUT | cansend can0 18EF71C9#10.00.00.00.00.00.00.00 ||
