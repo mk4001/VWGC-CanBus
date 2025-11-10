@@ -24,6 +24,7 @@
 | rem time battery|18EF72EB|01 00 3A 26 00 00 00 00|The 2ºB is h, the 3ºB min|
 | Battery Voltage (V)|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 5ºB translated into DEC: the ten +5 and you get the whole part, the unit is the decimal part.|
 | Battery percentage|18EF72EB|00 00 00 0A 50 00 FF 01|Value in 4ºB is the percentage /10 (ES: 0A -> 10*10 = 100)|
+| 240v Connected|18EF72EB|80 00 00 00 00 00 00 00| Electric cable connected
 | Display goes ON|18EF70C9|00 40 00 00 00 00 00 00|using I/O Button|
 | Display goes OFF|18EF70C9|00 00 00 00 00 00 00 00|using I/O Button|
 | Door Locked|18EF70EB|00 04 3A 26 00 00 00 00|1ºB = 04 and then: 00|
