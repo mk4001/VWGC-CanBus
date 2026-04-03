@@ -98,6 +98,13 @@ The RGB controller is obviously located inside the technical cabinet exactly und
 
 ![VW controller CAN-BUS](https://github.com/user-attachments/assets/c56e8efb-ccc1-46e1-bcbd-4c871873f29d)
 
+------------------------------------------------------------------------------------
+
+I added the file "VW_GrandCalifornia_J608.dbc" for SavvyCAN (utility for debugging cross-platform CANBUS logs) so that you can debug in a more humane way
+
+Those who were able to discover new codes or understand where my interpretations were wrong, are welcome to contribute to this project.
+
+https://github.com/collin80/SavvyCAN
 
 ------------------------------------------------------------------------------------
 
