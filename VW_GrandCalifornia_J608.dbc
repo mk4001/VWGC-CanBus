@@ -1,0 +1,58 @@
+VERSION "VW_GrandCalifornia_J608"
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BA_REL_DEF_
+	TAG_UART_BITRATE_
+	REF_SIGNAL_REL_
+	TMT_ID_NE_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: J608 Master
+
+BO_ 2565829355 Battery_Status: 8 J608
+ SG_ Charger_230V_Status : 0|8@1+ (1,0) [0|255] "" Master
+ SG_ Battery_Percent : 24|8@1+ (1,0) [0|100] "%" Master
+ SG_ Battery_Voltage : 32|8@1+ (0.1,5) [0|25] "V" Master
+ SG_ Battery_Current : 48|8@1- (1,0) [-128|127] "A" Master
+
+BO_ 2565828843 Battery_Time: 8 J608
+ SG_ Rem_Hours : 16|8@1+ (1,0) [0|255] "h" Master
+ SG_ Rem_Minutes : 24|8@1+ (1,0) [0|59] "min" Master
+
+BO_ 2565829611 Water_Levels: 8 J608
+ SG_ Fresh_Water_Empty_Flag : 0|8@1+ (1,0) [0|1] "" Master
+ SG_ Fresh_Water_Level : 32|8@1+ (1,0) [0|100] "%" Master
+ SG_ Grey_Water_Level : 48|8@1+ (1,0) [0|100] "%" Master
+
+BO_ 2565829099 System_Status: 8 J608
+ SG_ Camping_Mode_Status : 8|8@1+ (1,0) [0|255] "" Master
+
+VAL_ 2565829355 Charger_230V_Status 80 "Connected" 64 "Disconnected" ;
+VAL_ 2565829611 Fresh_Water_Empty_Flag 1 "EMPTY" 0 "OK" ;
+VAL_ 2565829099 Camping_Mode_Status 64 "ON" 0 "OFF" ;
